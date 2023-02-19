@@ -6,12 +6,12 @@ export default function Heading() {
   return (
     <div
       className={
-        "bg-gradient-to-r from-[#1d2a4e] to-[#4e63b8] -skew-y-[11deg] mt-80"
+        "bg-gradient-to-r from-[#1d2a4e] to-[#4e63b8] -skew-y-[9deg] origin-top-right"
       }
     >
       <div
         className={
-          "skew-y-[11deg] flex flex-col align-middle justify-center text-[28px] text-text py-32"
+          "skew-y-[9deg] flex flex-col align-middle justify-center text-[28px] text-text py-32"
         }
       >
         <TypingEffect
