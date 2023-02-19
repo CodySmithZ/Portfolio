@@ -13,7 +13,7 @@ export default function SkillHover(props: { skill: string; image: string }) {
     >
       <Image
         src={props.image}
-        alt="skill"
+        alt={props.skill}
         width={0}
         height={0}
         style={{ width: "auto", height: "auto" }}
