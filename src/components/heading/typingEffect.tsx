@@ -99,7 +99,8 @@ function TypingEffect(props: {
   }, [isComplete]);
 
   return (
-    <div className={"overflow-hidden w-fit flex mx-auto font-light"}>
+    <div className={"flex overflow-hidden m-auto font-light"}>
+      {" "}
       {displayWord}
       {isComplete ? (
         <div className={""}></div>

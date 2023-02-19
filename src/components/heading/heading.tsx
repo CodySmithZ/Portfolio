@@ -21,11 +21,11 @@ export default function Heading() {
           hideCursorOnComplete={true}
         />
         <TypingEffect
-          lines={["Welcome to my website"]}
-          backspaces={[]}
+          lines={["Welcome to my website", "portfolio"]}
+          backspaces={[7]}
           speed={150}
           EOLpauseTime={1000}
-          delayStart={0}
+          delayStart={1000}
           start={startSecondHeading}
         />
       </div>
