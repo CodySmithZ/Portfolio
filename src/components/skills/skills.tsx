@@ -19,7 +19,7 @@ export default function Skills() {
       <div className={"skew-y-[9deg] flex flex-row justify-center"}>
         <div
           className={
-            "flex flex-col text-text w-1/2 ml-4 justify-center items-center"
+            "flex flex-col text-text w-11/12 sm:w-9/12 lg:w-2/3 xl:w-1/2 justify-center items-center"
           }
         >
           <div className={"text-[28px] font-light mb-5"}>Skills</div>

@@ -6,7 +6,7 @@ export default function About() {
     <div className={"skew-y-[9deg] bg-green-main-500 origin-top-left py-32"}>
       <div
         className={
-          "-skew-y-[9deg] flex flex-row w-1/2 mx-auto my-0 items-center"
+          "-skew-y-[9deg] flex flex-row w-11/12 sm:w-9/12 lg:w-2/3 xl:w-1/2 mx-auto my-0 items-center"
         }
       >
         <div className="w-1/3 ">

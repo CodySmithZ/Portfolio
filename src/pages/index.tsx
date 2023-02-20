@@ -11,6 +11,7 @@ export default function Home() {
       </div>
       <div className="bg-green-main-100 ">
         <Heading />
+        
       </div>
       <div className="bg-green-main-400 pt-32">
         <About />
