@@ -72,7 +72,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="flex justify-center ">
+    <div id="projects" className="flex justify-center">
       <div
         className={
           "flex flex-row flex-wrap xl:w-10/12 sm:w-12/12 justify-around "

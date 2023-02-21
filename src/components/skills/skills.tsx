@@ -15,7 +15,10 @@ export default function Skills() {
     { skill: "MySQL", image: "/mysql.svg" },
   ];
   return (
-    <div className={"-skew-y-[9deg] bg-green-main-700 origin-top-right py-32"}>
+    <div
+      id={"skills"}
+      className={"-skew-y-[9deg] bg-green-main-700 origin-top-right py-32"}
+    >
       <div className={"skew-y-[9deg] flex flex-row justify-center"}>
         <div
           className={
