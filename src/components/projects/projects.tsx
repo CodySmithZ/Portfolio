@@ -6,17 +6,17 @@ export default function Projects() {
 
   const projects = [
     {
-      name: "Todo List",
-      image: "/projects/todolist.bmp",
+      name: "Countryle (Remake)",
+      image: "/projects/countryle.bmp",
       description:
-        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
+        "A wordle based game where you guess the country based on the image.",
       skills: [
-        { skill: "Svelte", image: "/svelte.svg" },
+        { skill: "Nextjs", image: "/nextjs.svg" },
         { skill: "JavaScript", image: "/javascript.svg" },
         { skill: "TailwindCSS", image: "/tailwindcss.svg" },
       ],
-      link: "http://todolist.codysmith.me/",
-      github: "https://github.com/CodySmithZ/TodoListSvelte",
+      link: "http://countryle.codysmith.me/",
+      github: "https://github.com/CodySmithZ/Countryle",
     },
     {
       name: "Todo List",

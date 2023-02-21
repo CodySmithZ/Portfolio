@@ -14,7 +14,7 @@ export default function Project(props: {
   return (
     <div className="bg-green-main-500 rounded-xl lg:w-5/12 sm:w-7/12 w-11/12 mb-16 shadow-lg sha">
       <h1 className="font-light text-[28px] bg-green-main-600 w-full text-center rounded-t-xl mb-5 py-2">
-        Todo List
+        {props.name}
       </h1>
       <div className="flex flex-col items-center text-center justify-center px-5">
         <Image
