@@ -27,8 +27,8 @@ export default function Skills() {
         >
           <div className={"text-[28px] font-light mb-5"}>Skills</div>
           <div className="flex flex-row justify-around items-center w-full">
-            {skills.map((skill) => (
-              <SkillHover skill={skill.skill} image={skill.image} />
+            {skills.map((skill, index) => (
+              <SkillHover skill={skill.skill} image={skill.image} key={index} />
             ))}
           </div>
         </div>

@@ -26,8 +26,10 @@ export default function Project(props: {
           className="rounded-xl shadow-md"
         />
         <div className="flex flex-row justify-between items-center w-2/5 sm:w-2/5 mt-7 mb-2">
-          {props.skills.map((skill) => {
-            return <SkillHover skill={skill.skill} image={skill.image} />;
+          {props.skills.map((skill, index) => {
+            return (
+              <SkillHover skill={skill.skill} image={skill.image} key={index} />
+            );
           })}
         </div>
         <div className="font-extralight mt-0">{props.description}</div>

@@ -4,7 +4,19 @@ import About from "@/components/about/about";
 import NavBar from "@/components/navbar/navbar";
 import Skills from "@/components/skills/skills";
 import Projects from "@/components/projects/projects";
-export default function Home() {
+import { GetServerSideProps } from "next";
+export default function Home({
+  data,
+}: {
+  data: {
+    name: string;
+    link: string;
+    image: string;
+    github: string;
+    description: string;
+    skills: { skill: string; image: string }[];
+  }[];
+}) {
   return (
     <div className="flex flex-col bg-green-main-100">
       <div className="bg-green-main-100 h-10">
@@ -20,8 +32,65 @@ export default function Home() {
         <Skills />
       </div>
       <div className="bg-green-main-800 pt-20">
-        <Projects />
+        <Projects data={data} />
       </div>
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // //fetch json from gist
+  // const res = await fetch(
+  //   "https://gist.github.com/CodySmithZ/fcf4234261103c91b9d863838312d675"
+  // );
+  // const data: Array<Object> = await res.json();
+
+  const data = [
+    {
+      name: "Countryle (Remake)",
+      image: "/projects/countryle.bmp",
+      description:
+        "A wordle based game where you guess the country based on the image.",
+      skills: [
+        { skill: "Nextjs", image: "/nextjs.svg" },
+        { skill: "JavaScript", image: "/javascript.svg" },
+        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
+      ],
+      link: "http://countryle.codysmith.me/",
+      github: "https://github.com/CodySmithZ/Countryle",
+    },
+    {
+      name: "Todo List",
+      image: "/projects/todolist.bmp",
+      description:
+        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
+      skills: [
+        { skill: "Svelte", image: "/svelte.svg" },
+        { skill: "JavaScript", image: "/javascript.svg" },
+        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
+      ],
+      link: "http://todolist.codysmith.me/",
+      github: "https://github.com/CodySmithZ/TodoListSvelte",
+    },
+    {
+      name: "Todo List",
+      image: "/projects/todolist.bmp",
+      description:
+        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
+      skills: [
+        { skill: "Svelte", image: "/svelte.svg" },
+        { skill: "JavaScript", image: "/javascript.svg" },
+        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
+      ],
+      link: "http://todolist.codysmith.me/",
+      github: "https://github.com/CodySmithZ/TodoListSvelte",
+    },
+  ];
+
+  //return data as props
+  return {
+    props: {
+      data: data,
+    },
+  };
+};
