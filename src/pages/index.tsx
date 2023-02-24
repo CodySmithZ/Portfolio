@@ -39,53 +39,11 @@ export default function Home({
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  // //fetch json from gist
-  // const res = await fetch(
-  //   "https://gist.github.com/CodySmithZ/fcf4234261103c91b9d863838312d675"
-  // );
-  // const data: Array<Object> = await res.json();
-
-  const data = [
-    {
-      name: "Countryle (Remake)",
-      image: "/projects/countryle.bmp",
-      description:
-        "A wordle based game where you guess the country based on the image.",
-      skills: [
-        { skill: "Nextjs", image: "/nextjs.svg" },
-        { skill: "JavaScript", image: "/javascript.svg" },
-        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
-      ],
-      link: "http://countryle.codysmith.me/",
-      github: "https://github.com/CodySmithZ/Countryle",
-    },
-    {
-      name: "Todo List",
-      image: "/projects/todolist.bmp",
-      description:
-        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
-      skills: [
-        { skill: "Svelte", image: "/svelte.svg" },
-        { skill: "JavaScript", image: "/javascript.svg" },
-        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
-      ],
-      link: "http://todolist.codysmith.me/",
-      github: "https://github.com/CodySmithZ/TodoListSvelte",
-    },
-    {
-      name: "Todo List",
-      image: "/projects/todolist.bmp",
-      description:
-        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
-      skills: [
-        { skill: "Svelte", image: "/svelte.svg" },
-        { skill: "JavaScript", image: "/javascript.svg" },
-        { skill: "TailwindCSS", image: "/tailwindcss.svg" },
-      ],
-      link: "http://todolist.codysmith.me/",
-      github: "https://github.com/CodySmithZ/TodoListSvelte",
-    },
-  ];
+  //fetch json from gist
+  const res = await fetch(
+    "https://gist.github.com/CodySmithZ/fcf4234261103c91b9d863838312d675"
+  );
+  const data: Array<Object> = await res.json();
 
   //return data as props
   return {
