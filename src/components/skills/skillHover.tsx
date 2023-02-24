@@ -1,11 +1,38 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-export default function SkillHover(props: { skill: string; image: string }) {
+export default function SkillHover(props: {
+  skill: string;
+  image: string;
+  hover: boolean;
+  userIsHovering?: (isHovering: boolean) => void;
+}) {
   const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    setIsHovered(props.hover);
+  }, [props.hover]);
+
+  useEffect(() => {
+    props.userIsHovering;
+  }, [isHovered]);
+
+  const enter = () => {
+    setIsHovered(true);
+    if (props.userIsHovering) {
+      props.userIsHovering(true);
+    }
+  };
+
+  const exit = () => {
+    setIsHovered(false);
+    if (props.userIsHovering) {
+      props.userIsHovering(false);
+    }
+  };
   return (
     <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => enter()}
+      onMouseLeave={() => exit()}
       className={`
       ${isHovered ? "scale-[1.75]" : ""} 
       transition-all duration-500 flex flex-col items-center justify-between w-8

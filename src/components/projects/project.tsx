@@ -28,7 +28,12 @@ export default function Project(props: {
         <div className="flex flex-row justify-between items-center w-2/5 sm:w-2/5 mt-7 mb-2">
           {props.skills.map((skill, index) => {
             return (
-              <SkillHover skill={skill.skill} image={skill.image} key={index} />
+              <SkillHover
+                skill={skill.skill}
+                image={skill.image}
+                key={index}
+                hover={false}
+              />
             );
           })}
         </div>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SkillHover from "./skillHover";
 export default function Skills() {
+  const [currentHoverIndex, setCurrentHover] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const skills = [
     { skill: "React", image: "/react.svg" },
     { skill: "Next.js", image: "/nextjs.svg" },
@@ -14,6 +16,20 @@ export default function Skills() {
     { skill: "Svelte", image: "/svelte.svg" },
     { skill: "MySQL", image: "/mysql.svg" },
   ];
+
+  let index = 0;
+
+  useEffect(() => {
+    const hoverInterval = setInterval(() => {
+      if (index >= skills.length) {
+        index = 0;
+      }
+      setCurrentHover(index++);
+    }, 1500);
+    hoverInterval;
+    return () => clearInterval(hoverInterval);
+  }, []);
+
   return (
     <div
       id={"skills"}
@@ -27,8 +43,16 @@ export default function Skills() {
         >
           <div className={"text-[28px] font-light mb-5"}>Skills</div>
           <div className="flex flex-row justify-around items-center w-full">
-            {skills.map((skill, index) => (
-              <SkillHover skill={skill.skill} image={skill.image} key={index} />
+            {skills.map((skill, indexSkill) => (
+              <SkillHover
+                skill={skill.skill}
+                image={skill.image}
+                key={indexSkill}
+                hover={currentHoverIndex === indexSkill && !isPaused}
+                userIsHovering={(isHovering) => {
+                  setIsPaused(isHovering);
+                }}
+              />
             ))}
           </div>
         </div>
