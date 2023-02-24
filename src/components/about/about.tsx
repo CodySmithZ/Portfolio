@@ -18,10 +18,9 @@ export default function About() {
         <div className={"flex flex-col text-text w-2/3 ml-4"}>
           <div className={"text-[28px] font-light"}>About</div>
           <div className={"font-extralight"}>
-            Praesent posuere quis velit et laoreet. Donec semper efficitur
-            lorem, quis euismod nisl porta non. Suspendisse potenti. Donec arcu
-            mauris, ornare ut congue vel, scelerisque nec velit. Cras cursus
-            porta ligula vulputate volutpat. Duis laoreet sagittis tincidunt
+            Hi I am cody, I'm recent gradute with a passion for web development
+            from the frontend to the backend. I enjoy learning new technologys
+            that keep evolving how web development can be done.
           </div>
         </div>
       </div>
