@@ -102,7 +102,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         },
         {
           skill: "TypeScript",
-          image: "/Typescript.svg",
+          image: "/typescript.svg",
         },
         {
           skill: "TailwindCSS",
