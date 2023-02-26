@@ -12,7 +12,7 @@ function TypingEffect(props: {
   isComplete?: (arg0: boolean) => void;
   hideCursorOnComplete?: boolean;
 }) {
-  const [displayWord, setDisplayWord] = useState("");
+  const [displayWord, setDisplayWord] = useState("  ");
   const [started, setStarted] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
 
@@ -100,13 +100,13 @@ function TypingEffect(props: {
 
   return (
     <div className={"flex overflow-hidden m-auto font-light"}>
-      {" "}
       {displayWord}
-      {isComplete ? (
+      {isComplete || !props.start ? (
         <div className={""}></div>
       ) : (
         <div className={"typing"}></div>
       )}
+      &nbsp;
     </div>
   );
 }
