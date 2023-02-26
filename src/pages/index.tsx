@@ -53,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         "A wordle based game where you guess the country based on the image.",
       skills: [
         {
-          skill: "Nextjs",
+          skill: "NextJS",
           image: "/nextjs.svg",
         },
         {
@@ -91,26 +91,26 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       github: "https://github.com/CodySmithZ/TodoListSvelte",
     },
     {
-      name: "Todo List",
-      image: "/projects/todolist.bmp",
+      name: "My Portfolio",
+      image: "/projects/Portfolio.png",
       description:
-        "A Simple todo list made with Svelte, to demonstrate my ability to learn another framework for my personal portfolio.",
+        "My portfolio to showcase of the projects I have completed and the skills I know.",
       skills: [
         {
-          skill: "Svelte",
-          image: "/svelte.svg",
+          skill: "NextJS",
+          image: "/nextjs.svg",
         },
         {
-          skill: "JavaScript",
-          image: "/javascript.svg",
+          skill: "TypeScript",
+          image: "/TypeScript.svg",
         },
         {
           skill: "TailwindCSS",
           image: "/tailwindcss.svg",
         },
       ],
-      link: "http://todolist.codysmith.me/",
-      github: "https://github.com/CodySmithZ/TodoListSvelte",
+      link: "http://codysmith.me/",
+      github: "https://github.com/CodySmithZ/Portfolio",
     },
   ];
 
