@@ -20,9 +20,8 @@ export default function Project(props: {
         <Image
           src={props.image}
           alt={props.name + " project"}
-          width={0}
-          height={0}
-          style={{ width: "auto", height: "auto" }}
+          height={400}
+          width={450}
           className="rounded-xl shadow-md"
         />
         <div className="flex flex-row justify-between items-center w-2/5 sm:w-2/5 mt-7 mb-2">
